@@ -1,0 +1,18 @@
+
+
+{% load static %}
+<head>
+    <title>Student List</title>
+
+    <link rel="stylesheet" type="text/css" href="{%static 'css/sample.css'%}">
+
+</head>
+<body>
+    <h1>Student List</h1>
+    <ul>
+        {% for student in students %}
+            <li>{{ student.first_name }} {{ student.last_name }} - Grade {{ student.grade_level }}</li>
+        {% endfor %}
+    </ul>
+</body>
+
